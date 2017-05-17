@@ -1,1 +1,1 @@
-# node-ts-boilerplate
+# node-ts-boilerplate for BrestJS meetup
