@@ -1,0 +1,38 @@
+{
+  "name": "meetup-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "preinstall": "npm prune",
+    "postinstall": "tsc -p tasks.tsconfig.json",
+    "install:local": "npm i packages/typed_package_example --save && npm i packages/untyped_package_example --save",
+    "start": "tsc -p tasks.tsconfig.json && gulp dev",
+    "start:debug": "tsc -p tasks.tsconfig.json && gulp debug",
+    "easyStart": "tsc && pm2 start built/app.js --name meetup-ts --no-daemon",
+    "easyStart:debug": "tsc && node --inspect built/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "@types/gulp": "^4.0.2",
+    "@types/node": "^7.0.18",
+    "gulp": "^3.9.1",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-tslint": "^8.0.0",
+    "gulp-typescript": "^3.1.6",
+    "nodemon": "^1.11.0",
+    "pm2": "^2.4.6",
+    "run-sequence": "^1.2.2",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "typed_package_example": "file:packages/typed_package_example",
+    "untyped_package_example": "file:packages/untyped_package_example"
+  }
+}

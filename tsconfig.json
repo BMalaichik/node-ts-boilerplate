@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "built",
+                                              
+    "strict": true,
+    "noImplicitAny": false,    
+    "noUnusedLocals": false,    
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,        
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "manual_typings/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "packages"
+  ]
+}
